@@ -1,0 +1,38 @@
+.title{
+    text-align: center;
+    border: double medium #32292F;
+ }
+
+#background{
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.start{
+    background-color: #32292F;
+    max-width: 900px;
+    min-height: 600px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.btnPlayer{
+    text-align: center;
+    margin-top: 5%;
+    margin-left: 25%;
+    border: 1px solid rgba(27, 31, 35, .15);
+    cursor: pointer;
+    border-radius: 6px; /* arrondir les bords */
+    width: 50%;
+    height: 60px;
+    font-size: 40px;
+}
+
+a{
+    text-decoration: none;
+    color: #32292F;
+}
+
+footer{
+    text-align: center;
+}
