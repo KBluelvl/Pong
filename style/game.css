@@ -3,6 +3,12 @@
     border: double medium #32292F;
  }
 
+body{
+    background-color: rgb(239, 240, 243);
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
 #background{
     margin-left: 20%;
     margin-right: 20%;
@@ -33,6 +39,20 @@ a{
     color: #32292F;
 }
 
+a:hover{
+    text-decoration: underline;
+    color: rgb(68, 61, 61);
+}
+
 footer{
     text-align: center;
+    background-color: white;
+    height: 10vh;
+    width: 100vw;
+    margin-left: -1vw;
+}
+
+footer p{
+    font-size: 3vh;
+    color: rgb(129, 27, 173);
 }
