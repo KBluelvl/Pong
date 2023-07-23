@@ -13,13 +13,14 @@ const framePerSecond = 40;
 function init(){
     // balise canvas 
     cvs = $("#background")[0];
+
     // contexte du canvas
     ctx = cvs.getContext("2d");
-
-    // Create a Ball ----------------
+    
+    // Create a Ball
     ball = new Ball(cvs.width/2 - 10,cvs.height/2 -10,BALL_SPEED,BALL_SPEED);//(-10 to be on the right of the line)(-10 to be in the center of the height)
-
-    // Create players ---------------
+    
+    // Create players
     PLAYER_HEIGHT = cvs.height/6;
     p1 = new player(2,cvs.height/2 - 50);
     p2 = new player(cvs.width - 20 - 2,cvs.height/2 - 50);
@@ -61,9 +62,6 @@ function setup(){
     drawRectangle(ball.x,ball.y,BALL_SIZE,BALL_SIZE,"#fffffe");
 }
 
-
-
-
 function collision(p){
     if(ball.x + BALL_SIZE > cvs.width - PLAYER_WIDTH){
         ball.top = ball.y;
@@ -92,17 +90,13 @@ function resetBall(){
 function update(){
     ball.moveX();
     ball.moveY();
-
     if(ball.y + BALL_SIZE > cvs.height || ball.y - BALL_SIZE < 0){
         ball.bounceV();
     }
-
     let player = (ball.x < cvs.width /2) ? p1 : p2;
-
     if(collision(player)){
         ball.bounceH();
     }
-
     if(ball.x + BALL_SIZE > cvs.width){
         p1.incScore();
         resetBall();
@@ -206,51 +200,3 @@ $("#button2").click(function(){
     start();
     movePlayer();
 });
-
-
-
-/*
-function(data) {
-    if(data.text == "1 joueur"){
-        if(map[38] && p2.y > 0){ // up
-            p1.moveUp();
-        } else if(map[40] && p2.y + PLAYER_HEIGHT < 600){ // down
-            p1.moveDown();
-        }
-    } else if(data.text == "2 joueur"){
-        if(map[90] && map[38]){ // z+up
-            if(p1.y > 0){
-                p1.moveUp();
-            }
-            if(p2.y > 0){
-                p2.moveUp();
-            }
-        } else if(map[90] && map[40]){ // z+down
-            if(p1.y > 0){
-                p1.moveUp();
-            }
-            if(p2.y + PLAYER_HEIGHT < 600){
-                p2.moveDown();
-            }
-        } else if(map[83] && map[38]){ // s+up
-            if(p1.y + PLAYER_HEIGHT < 600){
-                p1.moveDown();
-            }
-            if(p2.y > 0){
-                p2.moveUp();
-            }
-        } else if(map[83] && map[40]){ //s+down
-            if(p1.y + PLAYER_HEIGHT < 600){
-                p1.moveDown();
-            }
-            if(p2.y + PLAYER_HEIGHT < 600){
-                p2.moveDown();
-            }
-        } else if(map[38] && p2.y > 0){ // up
-            p2.moveUp();
-        } else if(map[40] && p2.y + PLAYER_HEIGHT < 600){ // down
-            p2.moveDown();
-        }
-    }
-}
-*/
