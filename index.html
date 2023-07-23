@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="autor" content="Florian">
+    <meta name="autor" content="Florian Essomba">
     <link rel="stylesheet" href="style/game.css">
     <title>Start - pong</title>
 </head>
@@ -10,17 +10,13 @@
     <header>
         <h1 class="title">Pong</h1>
     </header>
-    <div class="start" action="action.php" method="post">
-        <a href="game1.html">
-        <button class="btnPlayer">
-            1 joueur
-        </button>
-    </a>
-    <a href="game2.html">
-        <button class="btnPlayer">
-            2 joueur
-        </button>
-    </a>
+    <div class="start">
+        <button id="button1">1 joueur</button>
+        <button id="button2">2 joueur</button>
     </div>
+    <script src="script/jquery.min.js"></script>
+    <script src="script/Ball.js"></script>
+    <script src="script/Player.js"></script>
+    <script src="script/game.js"></script>
 </body>
 </html>

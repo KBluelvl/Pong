@@ -22,7 +22,7 @@ body{
     margin-right: 20%;
 }
 
-.btnPlayer{
+#button1 , #button2{
     text-align: center;
     margin-top: 5%;
     margin-left: 25%;
