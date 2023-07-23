@@ -1,4 +1,4 @@
-# pong2
+# pong
 
 # How to play
-[Click Here](https://kbluelvl.github.io/pong2/)
+[Click Here](https://kbluelvl.github.io/pong/)
